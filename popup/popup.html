@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>TabNote</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header id="tabHeader" class="hidden">
+    <img id="fav" width="16" height="16" alt="" />
+    <div class="tt">
+      <strong id="tabTitle"></strong>
+      <span id="tabDomain"></span>
+    </div>
+  </header>
+
+  <section id="composer">
+    <textarea id="note" rows="3" maxlength="500" placeholder="Why did you open this tab?"></textarea>
+    <div class="row">
+      <span class="hint">↵ save · esc close</span>
+      <span class="grow"></span>
+      <button id="clearBtn" class="ghost hidden">Clear</button>
+      <button id="saveBtn" class="primary">Save note</button>
+    </div>
+    <p id="noteMeta" class="meta"></p>
+  </section>
+
+  <section id="unsupported" class="hidden">
+    <p>This page can't be annotated — it isn't a regular web page.</p>
+  </section>
+
+  <footer>
+    <button id="dashBtn" class="link">Open dashboard ↗</button>
+    <span class="hint">stays on this device</span>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

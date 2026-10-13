@@ -28,6 +28,14 @@ Tab Groups answer "what category is this?" — not "why is this open?". TabNote 
 - Notes survive Chrome restarts (re-linked by URL; orphans are preserved in the archive)
 - 100% local — no account, no sync, no analytics
 
+## Usage
+
+- **Note a tab:** click the TabNote icon (or press the shortcut) → type why you opened it → `Enter`. The tab's title now carries the note.
+- **Recall:** hover any tab — Chrome's native tooltip shows the full title, note included.
+- **Dashboard:** click *Open dashboard* in the popup to see every open tab across windows (search, "unannotated only" filter, one-click *Focus*) plus the 14-day archive of closed tabs.
+- **Shortcut:** `Ctrl+Shift+Y` (Windows/Linux) / `Cmd+Shift+Y` (Mac) — editable at `chrome://extensions/shortcuts`.
+- **First note on a tab:** pages opened *before* installing the extension show the note in the dashboard immediately; the title prefix appears after you reload that page.
+
 ## Privacy
 
 - Notes are stored in `chrome.storage.local`, on your machine. Nothing is transmitted, ever.
@@ -52,7 +60,15 @@ Vanilla HTML/CSS/JS on Chrome's Manifest V3 — no frameworks, no build step, no
 - [ ] Side panel mode for a persistent list
 - [ ] CSV export of the archive
 
-<!-- Screenshots will be added with v1.0 -->
+## Development
+
+Load the repo as an unpacked extension (see *Install*) and reload from `chrome://extensions` after edits. Icons are generated pixel-by-pixel with a zero-dependency script:
+
+```
+node tools/gen-icons.js
+```
+
+<!-- TODO: add screenshots (popup composer, dashboard, annotated tab strip) -->
 
 ## License
 

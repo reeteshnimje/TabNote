@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>TabNote — Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="../icons/icon32.png" alt="" width="24" height="24" />
+      <h1>TabNote</h1>
+    </div>
+    <nav class="views">
+      <button id="viewOpen" class="view active">Open tabs</button>
+      <button id="viewArchive" class="view">Archive</button>
+    </nav>
+    <div class="tools">
+      <input id="search" type="search" placeholder="Search title, note, or domain…  ( / )" />
+      <label id="unannotatedWrap" class="toggle">
+        <input type="checkbox" id="unannotated" />
+        <span>Unannotated only</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <p id="stats" class="stats"></p>
+    <div class="card">
+      <div class="tablewrap">
+        <table>
+          <thead id="thead"></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div id="empty" class="empty hidden"></div>
+    </div>
+  </main>
+
+  <footer class="foot">Everything stays in this browser — no accounts, no sync, no network calls.</footer>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>
